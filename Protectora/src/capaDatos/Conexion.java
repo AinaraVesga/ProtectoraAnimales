@@ -37,7 +37,7 @@ public class Conexion {
 	
 	public static void main(String[] args) {
 		// Pasamos una ruta a la que nos vamos a conectar
-		Connection conn = conectarA("../../DatabaseProtectora/DatabaseProtectora.db");
+		Connection conn = conectarA("DatabaseProtectora/DatabaseProtectora.db");
 		
 		// Cerramos la conexión
 		try {
