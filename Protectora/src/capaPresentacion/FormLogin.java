@@ -1,7 +1,9 @@
 package capaPresentacion;
 
 import javax.swing.*;
+import javax.swing.event.*;
 import java.awt.*;
+import java.awt.event.*;
 
 public class FormLogin extends JFrame {
 	
@@ -35,6 +37,21 @@ public class FormLogin extends JFrame {
 		
 		contenedor.add(panelDatos, BorderLayout.CENTER);
 		contenedor.add(panelBotones, BorderLayout.SOUTH);
+	}
+	
+	// Listener de eventos del CheckBox
+	public class AceptarListener implements ActionListener {
+		private String usuario;
+		private String pw;
+		
+		public AceptarListener(JTextField tfUsuario, JTextField tfPw) {
+			this.usuario = tfUsuario.getText();
+			this.pw = tfPw.getText();
+		}
+		public void actionPerformed(ActionEvent e) {
+			System.out.println("Usuario: " + usuario);
+			System.out.println("Contraseña: " + pw);
+		}
 	}
 
 }
